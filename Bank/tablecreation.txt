@@ -1,0 +1,20 @@
+CUSTOMER TABLE:
+CREATE TABLE customer(cus_id int primary key AUTO_INCREMENT,f_name varchar(40),l_name varchar(40),ad_line1 varchar(50),ad_line2 varchar(50),state varchar(20),city varchar(30),pincode int,password varchar(50))
+
+ACCOUNT TABLE:
+CREATE TABLE account(acc_no int PRIMARY KEY AUTO_INCREMENT,type varchar(20),balance int,doac date,cus_id int,foreign key(cus_id) references customer(cus_id))
+
+TRANSACTION DETAILS TABLE:
+CREATE TABLE Transaction_details(t_id int PRIMARY key AUTO_INCREMENT,acc_no int,time_stamp timestamp,type varchar(40),amount int)
+
+TRANSFER TABLE:
+create table transfer(tr_id int PRIMARY key AUTO_INCREMENT,from_ac_no int,to_ac_no int,amount int,FOREIGN KEY(from_ac_no) REFERENCES account(acc_no),FOREIGN KEY(to_ac_no) REFERENCES account(acc_no))
+
+CLOSE_ACC_HISTORY TABLE:
+create table closed_acc_history(acc_no int PRIMARY KEY AUTO_INCREMENT,closedate date)
+
+FD_ACCOUNT TABLE:
+CREATE TABLE fd_account(fd_accno int PRIMARY KEY,cus_id int,fd_amount int,fd_period int,FOREIGN KEY(fd_accno) REFERENCES account(acc_no))
+
+LOAN_ACCOUNT TABLE:
+CREATE TABLE loan_account(loan_accno int PRIMARY KEY,cus_id int,loan_amount int,repayment_term int,FOREIGN KEY(loan_accno) REFERENCES account(acc_no))

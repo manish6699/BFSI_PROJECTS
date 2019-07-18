@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<style type="text/css">
+	body
+	{
+		background-color: #313335;
+		text-transform: uppercase;
+		text-align: center;
+		color: white;
+	}
+	h1
+	{
+		font-size: 3vw;
+	}
+	a
+	{
+		color:white;
+		text-decoration: none;
+		font-size: 2.5vw;
+	}
+	a:hover
+	{
+		color: #343f51;
+	}
+	table{
+		font-size: 2.5vw;
+	}
+
+</style>
+<head>
+	<title>mini statement</title>
+</head>
+
+<body>
+<h1>mini statement</h1>
+<br>
+<h2>transaction details</h2>
+<br>
+<table align="center" border="1" cellpadding="5" cellspacing="5">
+<tr>
+	<th>tid</th>
+	<th>accno</th>
+	<th>date</th>
+	<th>type</th>
+	<th>amount</th>
+</tr>
+{% for row in data %}	
+<tr>
+	{% for d in row %}
+	<td>{{ d }}</td>
+	{% endfor %}
+</tr>
+{% endfor %}
+</table>
+<br>
+<h2>available balance</h2>
+<br>
+<table align="center" border="1" cellpadding="5" cellspacing="5">
+<tr>
+	<th>available balance</th>
+</tr>
+<tr>
+	<td>{{ data1[0] }}</td>
+</tr>
+</table>
+<br>
+<a style="font-size: 2vw" href="http://localhost:5001/cushome">back</a>
+</body>
+</html>

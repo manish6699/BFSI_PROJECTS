@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<style type="text/css">
+	body
+	{
+		background-color: #313335;
+		text-transform: uppercase;
+		text-align: center;
+		color: white;
+	}
+	h1
+	{
+		font-size: 3vw;
+	}
+	a
+	{
+		color:white;
+		text-decoration: none;
+		font-size: 2.5vw;
+	}
+	a:hover
+	{
+		color: #343f51;
+	}
+	table{
+		font-size: 2.5vw;
+	}
+
+</style>
+<head>
+	<title>cdfdal page</title>
+</head>
+<body>
+<h1>customer who don't have fd and avail loan account</h1>
+<br>
+<br>
+<br>
+<table align="center" border="1" cellpadding="5" cellspacing="5">
+<tr>
+	<th>customer id</th>
+	<th>first name</th>
+	<th>last name</th>
+</tr>
+{% for d in data %}	
+<tr>
+	<td>{{ d[0] }}</td>
+	<td>{{ d[1] }}</td>
+	<td>{{ d[2] }}</td>
+</tr>
+{% endfor %}
+</table>
+<br>
+<br>
+<a style="font-size: 2vw" href="http://localhost:5001/adminhome1">back</a>
+</body>
+</html>

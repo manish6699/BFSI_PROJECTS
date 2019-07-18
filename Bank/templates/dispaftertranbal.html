@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<style type="text/css">
+	body
+	{
+		background-color: #313335;
+		text-transform: uppercase;
+		text-align: center;
+		color: white;
+	}
+	h1
+	{
+		font-size: 3vw;
+	}
+	a
+	{
+		color:white;
+		text-decoration: none;
+		font-size: 2.5vw;
+	}
+	a:hover
+	{
+		color: #343f51;
+	}
+	table{
+		font-size: 2.5vw;
+	}
+
+</style>
+<head>
+	<title>transaction details</title>
+</head>
+<body>
+<table align="center" border="1" cellpadding="5" cellspacing="5">
+<tr>
+	<th>your balance</th>
+	<th>recipient balance</th>
+</tr>
+<tr>
+	<td>{{ data1 }}</td>
+	<td>{{ data2 }}</td>
+</tr>
+</table>
+<br>
+<br>
+<br>
+<a style="font-size: 2vw" href="http://localhost:5001/cushome">back to home</a>
+</body>
+</html>

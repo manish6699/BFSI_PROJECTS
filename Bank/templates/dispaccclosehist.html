@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<style type="text/css">
+	body
+	{
+		background-color: #313335;
+		text-transform: uppercase;
+		text-align: center;
+		color: white;
+	}
+	h1
+	{
+		font-size: 3vw;
+	}
+	a
+	{
+		color:white;
+		text-decoration: none;
+		font-size: 2.5vw;
+	}
+	a:hover
+	{
+		color: #343f51;
+	}
+	table{
+		font-size: 2.5vw;
+	}
+
+</style>
+<head>
+	<title>accounts close history</title>
+</head>
+<body>
+<h1>accounts close history</h1>
+<br>
+<br>
+<br>
+<table align="center" border="1" cellpadding="5" cellspacing="5">
+<tr>
+	<th>account number</th>
+	<th>close date</th>
+</tr>
+{% for row in data %}	
+<tr>
+	<td>{{ row[0] }}</td>
+	<td>{{ row[1] }}</td>
+</tr>
+{% endfor %}
+</table>
+<br>
+<br>
+<a href="http://localhost:5001/adminhome1">back</a>
+</body>
+</html>

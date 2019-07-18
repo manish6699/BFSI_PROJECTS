@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<style type="text/css">
+	body
+	{
+		background-image: url('/static/main.jpg');
+		background-size: 100%;
+		text-transform: uppercase;
+		text-align: center;
+		color: black;
+		opacity: 0.8;
+	}
+	h1
+	{
+		font-size: 40px;
+	}
+	a
+	{
+		color:black;
+		text-decoration: none;
+		font-size: 30px;
+	}
+	a:hover
+	{
+		color: #343f51;
+	}
+	table{
+		font-size: 30px;
+	}
+	tr{
+		height: 50px;
+	}
+</style>
+<head>
+	<title>admin sign in page</title>
+</head>
+<body>
+<h1>welcome admin</h1>
+<br>
+<br>
+<br>
+<form action="http://localhost:5001/adminhome" method="post">
+	<table align="center">
+	<tr><td>name:</td><td><input type="text" name="name" required=""></td></tr>
+	<br>
+	<br>
+	<tr><td>password:</td><td><input type="password" name="pass" required=""></td></tr>
+	</table>
+	<br>
+	<br>
+	<input type="submit" value="signin" style="width: 100px" name="submit">
+	<br>
+	<br>
+	<a style="font-size: 2vw" href="http://localhost:5001/home">back</a>
+</form>
+</body>
+</html>

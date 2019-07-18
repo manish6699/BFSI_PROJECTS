@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<style type="text/css">
+	body
+	{
+		background-color: #313335;
+		text-transform: uppercase;
+		text-align: center;
+		color: white;
+	}
+	h1
+	{
+		font-size: 3vw;
+	}
+	a
+	{
+		color:white;
+		text-decoration: none;
+		font-size: 3vw;
+	}
+	a:hover
+	{
+		color: #343f51;
+	}
+	table{
+		font-size: 2.5vw;
+	}
+
+</style>
+<head>
+	<title>loan details</title>
+</head>
+<body>
+<h1>loan details</h1>
+<br>
+<br>
+<table align="center" border="1" cellpadding="5" cellspacing="5">
+<tr>
+	<th>loan account no.</th>
+	<th>amount</th>
+	<th>repayment term</th>
+</tr>
+{% for d in data %}	
+<tr>
+	<td>{{ d[0] }}</td>
+	<td>{{ d[1] }}</td>
+	<td>{{ d[2] }}</td>
+</tr>
+{% endfor %}
+</table>
+<br>
+<br>
+<a style="font-size: 2vw" href="http://localhost:5001/cushome">back</a>
+</body>
+</html>

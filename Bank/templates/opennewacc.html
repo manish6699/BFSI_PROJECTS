@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+	body
+	{
+	    background-color: #313335;
+		text-transform: uppercase;
+		text-align: center;
+		color: black;
+	}
+	h1
+	{
+		font-size: 3vw;
+	}
+	h2{
+		font-size: 2.6vw;
+	}
+	a
+	{
+		color:black;
+		text-decoration: none;
+		font-size: 2.5vw;
+	}
+	a:hover
+	{
+		color: #343f51;
+	}
+	table{
+		font-size: 2.5vw;
+	}
+
+</style>
+<head>
+	<title>open new account</title>
+</head>
+<body>
+<h1>welcome {{ session['customer'] }}</h1>
+<br>
+<br>
+<h2>open new account</h2>
+<br>
+<br>
+<form action="http://localhost:5001/newacc" method="post">
+	<table align="center">
+	<tr><td>account type:</td><td><input type="text" name="type" placeholder="savings or current or fixed deposit"></td></tr>
+	</table>
+	<h2><input type="submit" value="create account" style="width: 110px" name="submit">
+<br>
+<br>
+<a style="font-size: 2vw" href="http://localhost:5001/cushome">back</a>
+</form>
+</body>
+</html>
