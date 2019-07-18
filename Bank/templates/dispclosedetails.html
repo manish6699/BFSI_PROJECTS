@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<style type="text/css">
+	body
+	{
+		background-color: #313335;
+		text-transform: uppercase;
+		text-align: center;
+		color: white;
+	}
+	h1
+	{
+		font-size: 3vw;
+	}
+	a
+	{
+		color:white;
+		text-decoration: none;
+		font-size: 2.5vw;
+	}
+	a:hover
+	{
+		color: #343f51;
+	}
+	table{
+		font-size: 2.5vw;
+	}
+
+</style>
+<head>
+	<title>account close details</title>
+</head>
+<body>
+<h1>account close details of {{ session['customer'] }}</h1>
+<br>
+<br>
+<h2>your account with id {{ data2 }} has been closed sucessfully, {{ data1[0] }} amount will be send to your address {{ data[0] }} {{ data[1] }} {{ data[2] }} {{ data[3] }} {{ data[4] }}</h2>
+<br>
+<br>
+<br>
+<a style="font-size: 2vw" href="http://localhost:5001/home">back</a>
+</body>
+</html>

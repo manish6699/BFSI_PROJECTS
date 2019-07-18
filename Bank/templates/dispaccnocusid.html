@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<style type="text/css">
+	body
+	{
+		background-color: #313335;
+		text-transform: uppercase;
+		text-align: center;
+		color: white;	
+	}
+	h1
+	{
+		font-size: 3vw;
+	}
+	a
+	{
+		color:white;
+		text-decoration: none;
+		font-size: 2.5vw;
+	}
+	a:hover
+	{
+		color:#343f51;
+	}
+	table{
+		font-size: 2.5vw;
+	}
+
+</style>
+<head>
+	<title>transaction details</title>
+</head>
+<body>
+<h1>your customer id and account number</h1>
+<br>
+<br>
+<br>
+<table align="center" border="1" cellpadding="5" cellspacing="5">
+<tr>
+	<th>customer id</th>
+	<th>account number</th>
+</tr>
+<tr>
+	<td>{{ data }}</td>
+	<td>{{ data1 }}</td>
+</tr>
+</table>
+<br>
+<br>
+<br>
+<a style="font-size: 2vw" href="http://localhost:5001/home">back to home</a>
+</body>
+</html>

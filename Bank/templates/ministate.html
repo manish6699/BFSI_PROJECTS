@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+	body
+	{
+		background-color: #313335;
+		text-transform: uppercase;
+		text-align: center;
+		color: black;
+	}
+	h1
+	{
+		font-size: 3vw;
+	}
+	a
+	{
+		color:black;
+		text-decoration: none;
+		font-size: 2.5vw;
+	}
+	a:hover
+	{
+		color: #343f51;
+	}
+	table{
+		font-size: 2.5vw;
+	}
+	td{
+		height: 80px;
+	}
+</style>
+<head>
+	<title>mini statement page</title>
+</head>
+<body>
+<h1>enter interval of mini statement:</h1>
+<form action="http://localhost:5001/statmini" method="post">
+	<table align="center">
+	<tr><td>account number:</td><td><input type="number" min="0" name="accno" required=""></td></tr>
+	<tr><td>from date:</td><td><input type="date" name="fdate" required=""></td></tr>
+	<tr><td>to date:</td><td><input type="date" name="tdate" required=""></td></tr>
+	</table>
+	<br>
+	<input type="submit" style="width: 100px" name="submit">
+<br>
+<br>
+<a style="font-size: 2vw" href="http://localhost:5001/cushome">back</a>
+</form>
+</body>
+</html>

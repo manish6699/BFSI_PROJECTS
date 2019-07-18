@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+	body
+	{
+		background-color: #313335;
+		text-transform: uppercase;
+		text-align: center;
+		color: black;	}
+	h1
+	{
+		font-size:3vw;
+	}
+	a
+	{
+		color:black;
+		text-decoration: none;
+		font-size: 2.5vw;
+	}
+	a:hover
+	{
+		color: #343f51;
+	}
+	table{
+		font-size: 2.5vw;
+	}
+
+	td{
+		height: 50px;
+	}
+
+</style>
+<head>
+	<title>avail loan page</title>
+</head>
+<body>
+<h1>welcome {{ session['customer'] }} enter details to apply for loan</h1>
+<br>
+<br>
+<form action="http://localhost:5001/applyloan" method="post">
+	<table align="center">
+	<tr><td>amount:</td><td><input type="number" min="1000" step="1000" name="amount" ></td></tr>
+	<tr><td>repayment period in months:</td><td><input type="number" min="12" name="term" ></td></tr>
+	</table>
+	<h2><input type="submit" value="apply for loan" style="width: 110px" name="submit">
+</form>
+<br>
+<br>
+<a style="font-size: 2vw" href="http://localhost:5001/cushome">back</a>
+</body>
+</html>

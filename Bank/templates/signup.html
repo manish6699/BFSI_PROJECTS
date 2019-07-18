@@ -1,0 +1,61 @@
+<html>
+<style type="text/css">
+	body
+	{
+		background-image: url('/static/main.jpg');
+		background-size: 100%;
+		text-transform: uppercase;
+		text-align: center;
+		color: black;
+		opacity: 0.8;
+	}
+	h1
+	{
+		font-size: 4vw;
+	}
+	a
+	{
+		color: black;
+		text-decoration: none;
+		font-size: 2.5vw;
+	}
+	a:hover
+	{
+		color:red;
+	}
+	table{
+		font-size: 2.5vw;
+	}
+</style>
+<head>
+	<title>signup</title>
+</head>
+<body>
+<h1>signup to nexus bank</h1>
+<br>
+<form action="http://localhost:5001/cusinsert" method="post">
+	<table align="center">
+	<tr><td>first name:</td><td><input type="text" name="fname" required=""></td></tr>
+	<tr><td>last name:</td><td><input type="text" name="lname" required=""></td></tr>
+	<tr><td>password:</td><td><input type="password" name="pass" required="" minlength="8"></td></tr>
+	<tr><td>address line1:</td><td><input type="text" name="adline1" required=""></td></tr>
+	<tr><td>address line2:</td><td><input type="text" name="adline2" required=""></td></tr>
+	<tr><td>state:</td><td><input type="text" name="state" required=""></td></tr>
+	<tr><td>city:</td><td><input type="text" name="city" required=""></td></tr>
+	<tr><td>pincode:</td><td><input type="number" name="pincode" maxlength="6" minlength="6" required=""></td></tr>
+	<tr><td>account type you want:</td><td><input type="text" name="type" placeholder="savings or current" required=""></td></tr>
+	<tr><td>initial amount:</td><td><input type="number" min="0" step="5000" name="amount" required=""></td></tr>
+</table>
+<br>
+<br>
+	<input type="submit" name="submit" style="width: 100px">
+	<br>
+	<br>
+	<a style="font-size: 2vw" href="http://localhost:5001/home">back</a>
+</form>
+</body>
+</html>
+
+
+
+

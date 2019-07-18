@@ -1,0 +1,50 @@
+<head>
+<!DOCTYPE html>
+<html>
+
+<style type="text/css">
+	body
+	{
+		background-color: #313335;
+		text-transform: uppercase;
+		text-align: center;
+		color: black;
+	}
+	h1
+	{
+		font-size: 3vw;
+	}
+	a
+	{
+		color:black;
+		text-decoration: none;
+		font-size: 2.5vw;
+	}
+	a:hover
+	{
+		color: #343f51;
+	}
+	table{
+		font-size: 2.5vw;
+	}
+
+</style>
+	<title>confirmation</title>
+</head>
+<body>
+<h1>are you sure to close your account</h1>
+<br>
+<br>
+<br>
+<form action="http://localhost:5001/closeacc" method="post">
+	<table align="center">
+	<tr><td>account number:</td><td><input type="number" name="acno"></td></tr>
+	</table>
+	<h2><input type="submit" value="close account" style="width: 110px" name="submit">
+</form>
+<br>
+<br>
+<br>
+<a style="font-size: 2vw" href="http://localhost:5001/cushome">back</a>
+</body>
+</html>
